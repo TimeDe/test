@@ -141,7 +141,7 @@
     </table>
     <hr />
     <!--以下为表单-->
-    <form>
+    <form action="" method="post" name="">
         用户名:<input type="text" name="" value="" maxlength="10" size="10" readonly="" /><!--type="控件类型",name="控件名称",value="控件值",maxlength="最大输入内容长度",size="控件的宽度",readonly="只读"-->
         <br />
         密&nbsp;&nbsp;&nbsp;码:<input type="password" name=""value="" size="" maxlength="8" readonly="" />
@@ -189,6 +189,82 @@
         <hr color="pink" />
         <!--上传文件控件-->
         <input type="file" name="">
+    </form>
+    <hr color="#369" />
+    <!--form表单小例子-->
+    <form action="" method="post" name="">
+        <table cellpadding="10" cellspacing="0" border="1" align="center" bgcolor="aqua">
+            <tr>
+                <th colspan="2">用户注册表</th>
+            </tr>
+            <tr>
+                <td>用户名</td>
+                <td>
+                    <input type="text"  name="" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td>密 &nbsp;&nbsp;码</td>
+                <td>
+                    <input type="password" name="" value="" />
+                </td>
+            </tr>
+            <tr>
+                <td>性 &nbsp;&nbsp;别</td>
+                <td>
+                    男<input type="radio" value="" name="sex" checked="checked" />
+                    女<input type="radio" value="" name="sex" />
+                </td>
+            </tr>
+            <tr>
+                <td>爱 &nbsp;&nbsp;好</td>
+                <td>
+                    <input type="checkbox" value="" name="">唱歌
+                    <input type="checkbox" value="" name="">跳舞
+                    <input type="checkbox" value="" name="">跑步
+                    <input type="checkbox" value="" name="">打篮球
+                    <input type="checkbox" value="" name="">做瑜伽
+                    <input type="checkbox" value="" name="">读书
+                    <input type="checkbox" value="" name="">料理
+                    <input type="checkbox" value="" name="">旅游
+                </td>
+            </tr>
+            <tr>
+                <td>家 &nbsp;&nbsp;乡</td>
+                <td>
+                    <select>
+                        <optgroup label="华北区">
+                            <option>北京</option>
+                            <option>河北</option>
+                            <option>天津</option>
+                        </optgroup>
+                        <optgroup label="东北区">
+                            <option>黑龙江</option>
+                            <option>吉林</option>
+                            <option>辽宁</option>
+                        </optgroup>
+                        <optgroup label="华西区">
+                            <option>山西</option>
+                            <option>陕西</option>
+                            <option>新疆</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>自我介绍</td>
+                <td>
+                    <textarea rows="10" cols="50"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button>空按钮</button>
+                    <input type="submit" value="提交" name="" />
+                    <input type="reset" value="重置" name="">
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>
