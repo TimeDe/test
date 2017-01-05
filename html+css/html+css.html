@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css+html</title>
+    <style>
+        /*伪类选择器*/
+        /*如同时出现需要按此顺序执行*/
+        a:link{color:red;text-decoration: none;}/*鼠标点击之前的样式*/
+        a:visited{color: #123456;}/*鼠标点击过后的样式*/
+        a:hover{color:yellow;font-size: 14px;}/*鼠标悬停时的样式*/
+        a:active{color: blue;font-weight: bolder;}/*鼠标点击还没有离开时的样式*/
+        /*字体属性*/
+        /*font-family后的值第一个为首选，若没有该字体则依次往后查找字体,font-size单位可以是px,cm,或者百分比(相对于默认字体),font-weight值有normal,blod,bloder,font-style值有normal(正常，默认),italic(倾斜)*/
+        p{font-family: "黑体","微软雅黑";font-size:20px;font-weight:bold;font-style:italic;}
+        /*文本属性*/
+        /*text-decoration可以取underline(下划线),overline(上划线),line-through(删除线)等,text-indent缩进,text-align对齐方式,line-height行高*/
+        /*border-style可以取solid(实线),dotted(点线),dashed(虚线),double(双实线)*/
+        .p1{text-decoration:line-through;text-indent: 2em;text-align: left;line-height:30px;font-size: 20px;border: 1px solid red;}
+        .p2{text-decoration: overline;text-align:center;border: 5px double blue;}
+        /*背景图像*/
+        #div1{
+            border:1px solid #111;
+            width: 1000px;
+            height: 800px;
+            /*background-color: #456789;*/
+            background-image: url("../html/img/touxiang.png");/*背景图像*/
+            background-repeat: no-repeat;/*背景图像重复*/
+            background-position:center top;/*背景图像定位*/
+            background-attachment: scroll;/*fixed背景图像不随界面滚动，scroll滚动*/
+        }
+        .box1{border: 1px solid red;}
+        .box11{border: 1px solid blue;width:200px;height: 100px;float: left;}
+        .box12{border:1px solid green;width:300px;height:100px;float:left;}
+        .clear1{clear:both;}
+
+        .clear2{display:block;overflow:hidden;}
+
+        .clear3:after{display:block;clear:both;content:".";visibility: hidden;height:0px;}
+        .clear3{zoom:1;}/*兼容IE*/
+    </style>
+</head>
+<body>
+    <a href="http://www.baidu.com" target="_blank">点击跳转百度</a>
+    <hr />
+    <p>段落1</p>
+    <p class="p1">中新社台北1月2日电(记者陈小愿陈林)顶新集团1月2日证实，旗下台湾康师傅食品股份有限公司自1月1日起解散。</p>
+    <p class="p2">顶新集团公共事务室副总经理贾先德2日晚答复中新社记者询问时表示，这对聚焦大陆市场的康师傅控股有限公司的营运及财务没有任何重大影响。</p>
+    <div id="div1">新建div，演示背景图像</div>
+    <!--yi下演示盒子模型-->
+    <!--内联元素<a>,<b>,<i>,<u>,<font>,<span>-->
+    <!--块级元素<div>,<ul>,<ol>,<li>,<body>,<hx>,<p>,<table>,<tr>,<td>-->
+    <!--块级元素独占一行，可以设置宽高，内外边距等，而内联元素不能设置宽高，不能设置上下内外边距，可以设置左右内外边距-->
+    <!--浮动，浮动使元素脱离了文档流，可以实现横向排版，但是会影响父级元素无法被撑开,这就需要清除浮动-->
+    <!--清除浮动方法一,在浮动元素同级添加空盒子，定义clear类-->
+    <div class="box1">
+        <div class="box11">盒子11</div>
+        <div class="box12">盒子12</div>
+        <div class="clear1"></div>
+    </div>
+    <hr color="#369" />
+    <!--清除浮动方法二，为父级元素添加overflow:hidden属性-->
+    <div class="box1 clear2">
+        <div class="box11">盒子11</div>
+        <div class="box12">盒子12</div>
+    </div>
+    <hr color="#369" />
+    <!--清除浮动方法三，定义clear类，使用伪类，把clear赋给父级元素,兼容所有浏览器，推荐使用-->
+    <div class="box1 clear3">
+        <div class="box11">盒子11</div>
+        <div class="box12">盒子12</div>
+    </div>
+</body>
+</html>
