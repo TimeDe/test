@@ -1,0 +1,51 @@
+*{margin: 0;padding: 0;}
+
+#box{
+    width:334px;
+    height:393px;
+    background-color: #31295c;
+}
+
+#content{
+    width:277px;
+    height: 324px;
+    background-color: #31295c;
+    position: absolute;
+    left: 27px;
+    top:34px;
+}
+
+#box1{
+    width:277px;
+    height:245px;
+}
+
+#box11{
+    width: 277px;
+    height: 206px;
+    background: url("../image/city.jpg");
+}
+
+#box12{
+    width:277px;
+    height: 39px;
+    background:url("../image/sun.jpg") no-repeat #0863d5 229px 8px;
+}
+
+#box2{
+    width:277px;
+    height: 38px;
+    position: absolute;
+    top: 246px;
+    border-top: 1px solid #08aaf5;
+    background: url("../image/xuehua.jpg") no-repeat #0768d9 229px 11px;
+}
+
+#box3{
+    width: 277px;
+    height: 37px;
+    position: absolute;
+    bottom:0;
+    border-top: 1px solid #0caff0;
+    background: url("../image/xuehua.jpg") no-repeat #046cdd 229px 10px;
+}
